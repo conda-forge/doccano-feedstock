@@ -1,5 +1,5 @@
 {% set name = "doccano" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 {% set node_version = os.environ.get('NODEJS_VERSION') or '13.6.0' %}
 
 package:
@@ -8,13 +8,13 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: e74680d4bb677bf03bd27b4f3ead9fa84624bb85f7ab1063b11b90e923f65105
+  sha256: 209ea6dcee368e4ac6cc80177ec6f1563d9a49403142b00a0f0cedf3538a8558
   patches:
     - rmv_drf_yasg.patch  # remove unneccesary dep drf_yasg in app/app/settings.py and app/app/urls.py
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
   missing_dso_whitelist:
     - '*/libc.musl-x86_64.so.1'
 
