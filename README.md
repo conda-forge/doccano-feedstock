@@ -5,7 +5,7 @@ Home: https://github.com/doccano/doccano
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Open source text annotation tool for machine learning practitioner.
 
