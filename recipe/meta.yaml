@@ -22,9 +22,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - nodejs
+    - nodejs <14
   run:
-    - nodejs
+    - nodejs <14
 
 test:
   commands:
