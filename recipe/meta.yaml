@@ -1,5 +1,5 @@
 {% set name = "doccano" %}
-{% set version = "1.0.5" %}
+{% set version = "1.4.1" %}
 
 package:
   name: doccano
@@ -7,12 +7,10 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 209ea6dcee368e4ac6cc80177ec6f1563d9a49403142b00a0f0cedf3538a8558
-  patches:
-    - rmv_drf_yasg.patch  # remove unneccesary dep drf_yasg in app/app/settings.py and app/app/urls.py
+  sha256: 69e96633a372dcbc83848ba0cc81bd58ea4daa268a46780f1438641d6e865c4b
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win]
   missing_dso_whitelist:
     - '*/libc.musl-x86_64.so.1'
@@ -41,6 +39,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - rluria14
-    - oblute
-    - ndmaxar
+    - JennaLipscomb
+    - mxr-conda
