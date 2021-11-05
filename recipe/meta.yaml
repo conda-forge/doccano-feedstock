@@ -1,5 +1,5 @@
 {% set name = "doccano" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.1" %}
 
 package:
   name: doccano
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 69e96633a372dcbc83848ba0cc81bd58ea4daa268a46780f1438641d6e865c4b
+  sha256: 7408e8ff9b5b07bb00af82f2828f8fdda2fb2b05d39e241ffa1db48ce8e591e2
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
   missing_dso_whitelist:
     - '*/libc.musl-x86_64.so.1'
 
