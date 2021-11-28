@@ -10,7 +10,7 @@ source:
   sha256: 69e96633a372dcbc83848ba0cc81bd58ea4daa268a46780f1438641d6e865c4b
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   missing_dso_whitelist:
     - '*/libc.musl-x86_64.so.1'
