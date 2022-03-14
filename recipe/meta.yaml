@@ -1,5 +1,5 @@
 {% set name = "doccano" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.2" %}
 
 package:
   name: doccano
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: ab342e3a64e68602e4476d7ce9967ed4f0b670b4235c2858ca55e6eba3537dcf
+  sha256: 5efcacbc2cc910c6caf6bcddbe74abae941d4e3b4ed7871b6510dd01cf7cc91f
 
 build:
   number: 0
