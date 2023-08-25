@@ -10,19 +10,21 @@ source:
   sha256: 5efcacbc2cc910c6caf6bcddbe74abae941d4e3b4ed7871b6510dd01cf7cc91f
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
-  missing_dso_whitelist:
-    - '*/libc.musl-x86_64.so.1'
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - nodejs  # [unix]
+    - make
   host:
-    - nodejs <14
+    - nodejs
+    - pnpm
+    - pnpm-licenses
   run:
-    - nodejs <14
+    - nodejs
 
 test:
   commands:
@@ -31,7 +33,6 @@ test:
 about:
   home: https://github.com/doccano/doccano
   license: MIT
-  license_family: MIT
   license_file: LICENSE
   summary: Open source text annotation tool for machine learning practitioner.
   doc_url: https://github.com/doccano/doccano
@@ -41,3 +42,4 @@ extra:
   recipe-maintainers:
     - JennaLipscomb
     - mxr-conda
+    - xhochy
