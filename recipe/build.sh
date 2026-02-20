@@ -12,11 +12,9 @@ export npm_config_build_from_source=true
 rm $PREFIX/bin/node
 ln -s $BUILD_PREFIX/bin/node $PREFIX/bin/node
 
-NPM_CONFIG_USERCONFIG=/tmp/nonexistentrc
+export NPM_CONFIG_USERCONFIG=/tmp/nonexistentrc
 
 pushd frontend
-pnpm import
-pnpm install
-pnpm pack
+npm pack
 npm install -g ${PKG_NAME}-1.0.0.tgz
 # pnpm licenses list --json | pnpm-licenses generate-disclaimer --json-input --output-file=ThirdPartyLicenses.txt
